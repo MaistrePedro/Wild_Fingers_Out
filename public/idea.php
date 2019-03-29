@@ -3,7 +3,7 @@
 
 <html lang="en" class="no-js">
 <head>
-	<title>.Idea - Add Yours</title>
+	<title>.Idea - Ideas</title>
 
 	<meta charset="utf-8">
 
@@ -30,41 +30,29 @@
 			================================================== -->
 		<div id="content">
 
+			<!-- page-banner-section 
+				================================================== -->
             <?php
             include 'current/header.php';
             ?>
+			<!-- End page-banner section -->
 
-			<!-- contact-form-section 
-				================================================== -->
-			<section class="contact-form-section">
-				<div class="container">
-					<div class="contact-form-box">
-						<div class="row">
-							<div class="col-sm-12">
-								<h2>Complete our .gitignore</h2>
-
-								<form id="contact-form">
-									<div class="row">
-										<div class="col-sm-6">
-											<input name="name" id="name" type="text" placeholder="Lastname*">
-										</div>
-										<div class="col-sm-6">
-											<input name="mail" id="mail" type="text" placeholder="Firstname*">
-										</div>
-									</div>
-
-									<textarea name="comment" id="comment" placeholder="Your Idea*"></textarea>
-									<input type="submit" id="submit_contact" value="Submit Comment">
-									<div id="msg" class="message alert">
-									
-									</div>
-								</form>
-							</div>
+		<!-- blog-page-section 
+			================================================== -->
+		<section class="blog-page-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="blog-page-box iso-call">
+                            <?php
+                            include 'current/card.php';
+                            ?>
 						</div>
 					</div>
 				</div>
-			</section>
-			<!-- End contact-form section -->
+			</div>
+		</section>
+		<!-- End blog-page section -->
 
 		</div>
 		<!-- End content -->
