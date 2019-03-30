@@ -58,34 +58,27 @@ $pageUnderTitle = 'Share with us your crazy idea !'
 
                                 $pdo = new PDO(DSN, USER, PASS);
                                 $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
-
-
-
-
-
-
                                 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                                $data = cleanData($_POST);
-                                $errors = [];
-                                if (empty($data['user_name'])) {
-                                $errors['user_name'] = 'Please define your Nickname';
-                                }
-                                if (empty($data['title'])) {
-                                $errors['title'] = 'Define a title for your .Idea';
-                                }
-                                if (empty($data['idea'])) {
-                                $errors['idea'] = 'Share with us your .Idea';
-                                }
-                                if (empty($errors)) {
-                                $postQuery = "INSERT INTO idea (user_name, title, idea)
-                                VALUES (:user_name, :title, :idea)";
-                                $postStatement = $pdo->prepare($postQuery);
-                                $postStatement->bindValue(':user_name', $data['user_name'], PDO::PARAM_STR);
-                                $postStatement->bindValue(':title', $data['title'], PDO::PARAM_STR);
-                                $postStatement->bindValue(':idea', $data['idea'], PDO::PARAM_STR);
-                                $postStatement->execute();
-                                header('Location: index.php');
-                                }
+                                    $data = cleanData($_POST);
+                                    $errors = [];
+                                    if (empty($data['user_name'])) {
+                                    $errors['user_name'] = 'Please define your Nickname';
+                                    }
+                                    if (empty($data['title'])) {
+                                    $errors['title'] = 'Define a title for your .Idea';
+                                    }
+                                    if (empty($data['idea'])) {
+                                    $errors['idea'] = 'Share with us your .Idea';
+                                    }
+                                    if (empty($errors)) {
+                                        $query = "INSERT INTO ideas (user_name, title, idea) VALUES (:user_name, :title, :idea)";
+                                        $statement = $pdo->prepare($query);
+                                        $statement->bindValue(':user_name', $_POST["user_name"], PDO::PARAM_STR);
+                                        $statement->bindValue(':title', $_POST["title"], PDO::PARAM_STR);
+                                        $statement->bindValue(':idea', $_POST["idea"], PDO::PARAM_STR);
+                                        $statement->execute();
+                                        header('Location: index.php');
+                                    }
                                 }
                                 // --------------------------------------------------------- //
                                 ?>
