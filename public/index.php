@@ -1,5 +1,6 @@
 <?php
 
+require "../src/connec.php";
 
 $pdo = new PDO(DSN, USER, PASS);
 $query = "SELECT * FROM ideas";

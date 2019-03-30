@@ -1,11 +1,9 @@
 <?php
 
 $pageTitle = 'Add your .Idea';
-$pageUnderTitle = 'Share with us your crazy .Idea !'
+$pageUnderTitle = 'Great! You want to share with us your crazy .Idea ! :)'
 
 ?>
-
-
 
 
 <!doctype html>
