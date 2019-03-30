@@ -7,8 +7,8 @@ $res = $pdo->query($query);
 $ideas = $res->fetchAll();
 
 
-$pageTitle = 'Discover our .Idea';
-$pageUnderTitle = 'So much crazy !'
+$pageTitle = 'Welcome to .Idea';
+$pageUnderTitle = 'Let\'s make the world a better place with your .Idea !';
 
 ?>
 

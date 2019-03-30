@@ -1,7 +1,7 @@
 <?php
 
 $pageTitle = 'Add your .Idea';
-$pageUnderTitle = 'Share with us your crazy idea !'
+$pageUnderTitle = 'Share with us your crazy .Idea !'
 
 ?>
 
