@@ -4,8 +4,6 @@ require '../src/connec.php';
 
 $pdo = new PDO(DSN, USER, PASS);
 $query = "SELECT * FROM ideas";
-$res = $pdo->query($query);
-$ideas = $res->fetchAll();
 
 $res = $pdo->query($query);
 $result = $res->fetchAll(PDO::FETCH_ASSOC);
@@ -16,7 +14,6 @@ $pageTitle = 'Welcome to .Idea';
 $pageUnderTitle = 'Let\'s make the world a better place with your .Idea !';
 
 ?>
-
 
 
 <!doctype html>
