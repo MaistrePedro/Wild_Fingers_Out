@@ -15,7 +15,7 @@
 
     <div class="social-box">
 
-        <p>Made with   <i class="fas fa-heart"></i><br>by a crazy team !</p>
+        <p>Made with   <i class="fas fa-heart text-danger"></i> by a crazy team !</p>
     </div>
 
 </header>

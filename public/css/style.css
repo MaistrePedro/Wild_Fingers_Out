@@ -1515,6 +1515,9 @@ section.contact-form-section {
   #map {
     height: 200px; } }
 
+/*-------------------------------------------------*/
+/* =  modals                                       */
+/*-------------------------------------------------*/
 
 .modal-content {
   width: 25em;
@@ -1526,7 +1529,6 @@ section.contact-form-section {
   margin-left: 13em;
   margin-top: 3em;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.4);
-
 }
 
 .modal-content .btn:hover, .blog-post button:hover{
@@ -1539,7 +1541,6 @@ section.contact-form-section {
   background-color: #b8a173;
   color: white;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.4);
-
 }
 
 #contact-form button:hover{
