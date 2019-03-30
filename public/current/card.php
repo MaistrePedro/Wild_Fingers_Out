@@ -27,7 +27,10 @@
                 <button type="button" class="btn btn-default" data-dismiss="modal">Add a comment</button>
             </div>
         </div>
-        
+
+        <p><big><?php echo $value ['title'] ?></big></p>
+        <span><i class="fas fa-heart"></i> 6</span>
+
     </div>
 </div>
 

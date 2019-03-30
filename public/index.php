@@ -3,11 +3,17 @@
 require '../src/connec.php';
 
 $pdo = new PDO(DSN, USER, PASS);
+<<<<<<< HEAD
 $query = "SELECT * FROM ideas";
 
 $res = $pdo->query($query);
 $result = $res->fetchAll(PDO::FETCH_ASSOC);
 $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+=======
+$query = "SELECT * FROM idea";
+$res = $pdo->query($query);
+$idea = $res->fetchAll();
+>>>>>>> a9df1715d45a8867d5ddf60083535ce6ee07a9d2
 
 
 $pageTitle = 'Welcome to .Idea';
@@ -32,7 +38,8 @@ $pageUnderTitle = 'Let\'s make the world a better place with your .Idea !';
 	<link rel="stylesheet" href="css/genix-assets.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -52,11 +59,11 @@ $pageUnderTitle = 'Let\'s make the world a better place with your .Idea !';
         <section class="blog-page-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-lg-12">
                         <div class="blog-page-box iso-call">
                             <?php
 
-                            foreach ($ideas as $key => $value) {
+                            foreach ($idea as $key => $value) {
                                 include 'current/card.php';
                                 // echo $value['id'];
                             }

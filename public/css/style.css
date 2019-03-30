@@ -963,7 +963,7 @@ ul.filter {
     .sidebar .category-widget ul li a:hover:before {
       background: #c7ad88; }
   .sidebar .category-widget ul li:last-child {
-    margin-bottom: 0px; }
+    margin-bottom: 0; }
   .sidebar .popular-widget ul.popular-list li {
     list-style: none;
     overflow-y: hidden;
@@ -1212,7 +1212,7 @@ section.single-post .share-tag-box {
           .comment-area-box > ul li .comment-box .comment-content a:hover {
             color: #c7ad88; }
           .comment-area-box > ul li .comment-box .comment-content p {
-            margin-bottom: 0px; }
+            margin-bottom: 0; }
   .comment-area-box ul.depth .comment-box {
     padding-left: 100px; }
 
@@ -1220,8 +1220,6 @@ section.single-post .share-tag-box {
 .errors {
   color: red;
 }
-
-
 
 
 /*------------------------------------------------- */
@@ -1441,7 +1439,7 @@ section.contact-form-section {
       padding: 10px 0;
       text-align: center; }
       header .social-box ul.social-icons li {
-        margin-right: 0px; }
+        margin-right: 0; }
       header .social-box p {
         display: none; }
   header:after {
