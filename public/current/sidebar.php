@@ -8,8 +8,7 @@
 
     <nav class="nav-menu">
         <ul class="menu-list">
-            <li><a class="active" href="index.php">Home</a></li>
-            <li><a class="active" href="idea.php">Ideas</a></li>
+            <li><a class="active" href="index.php">Ideas</a></li>
             <li><a class="active" href="add.php">Add Yours</a></li>
         </ul>
     </nav>

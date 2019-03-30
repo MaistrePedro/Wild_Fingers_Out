@@ -4,11 +4,13 @@
     <div class="border-line-box"></div>
     <div class="page-box-title">
         <div class="container">
+
             <h1>Welcome to .Idea</h1>
             <h2 class="typewriter">Let's make the world a better place with your .Idea !</h2>
-         <!--   <h1>Share your .Idea</h1>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
-        -->
+      <!--
+            <h1><?php /*echo $pageTitle; */?></h1>
+            <p><?php /*echo $pageUnderTitle*/?></p>
+-->
         </div>
     </div>
 </section>

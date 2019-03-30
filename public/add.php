@@ -1,3 +1,13 @@
+<?php
+
+$pageTitle = 'Add your .Idea';
+$pageUnderTitle = 'Share with us your crazy idea !'
+
+?>
+
+
+
+
 <!doctype html>
 
 
@@ -17,25 +27,20 @@
 </head>
 <body>
 
-	<!-- Container -->
+
 	<div id="container">
-		<!-- Header
-		    ================================================== -->
+
         <?php
         include 'current/sidebar.php';
         ?>
-		<!-- End Header -->
 
-		<!-- content 
-			================================================== -->
 		<div id="content">
 
             <?php
             include 'current/header.php';
             ?>
 
-			<!-- contact-form-section 
-				================================================== -->
+
 			<section class="contact-form-section">
 				<div class="container">
 					<div class="contact-form-box">
@@ -64,13 +69,13 @@
 					</div>
 				</div>
 			</section>
-			<!-- End contact-form section -->
+
 
 		</div>
-		<!-- End content -->
+
 
 	</div>
-	<!-- End Container -->
+
 
 	<script src="js/genix-plugins.min.js"></script>
 	<script type="text/javascript" src="js/jquery.countTo.js"></script>

@@ -1,3 +1,19 @@
+<?php
+
+
+$pdo = new PDO(DSN, USER, PASS);
+$query = "SELECT * FROM ideas";
+$res = $pdo->query($query);
+$ideas = $res->fetchAll();
+
+
+$pageTitle = 'Discover our .Idea';
+$pageUnderTitle = 'So much crazy !'
+
+?>
+
+
+
 <!doctype html>
 
 
@@ -17,29 +33,41 @@
 </head>
 <body>
 
-<!-- Container -->
+
 <div id="container">
-    <!-- Header
-        ================================================== -->
+
     <?php
     include 'current/sidebar.php';
     ?>
-    <!-- End Header -->
 
-    <!-- content
-        ================================================== -->
     <div id="content">
 
         <?php
         include 'current/header.php';
         ?>
 
+        <section class="blog-page-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="blog-page-box iso-call">
+                            <?php
+                            foreach ($ideas as $key => $value) {
+                                include 'current/card.php';
+                            }
+                            ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
     </div>
-    <!-- End content -->
+
 
 </div>
-<!-- End Container -->
+
 
 <script src="js/genix-plugins.min.js"></script>
 <script type="text/javascript" src="js/jquery.countTo.js"></script>
