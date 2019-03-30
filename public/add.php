@@ -77,7 +77,7 @@ $pageUnderTitle = 'Share with us your crazy idea !'
                                 $errors['idea'] = 'Share with us your .Idea';
                                 }
                                 if (empty($errors)) {
-                                $postQuery = "INSERT INTO ideas (user_name, title, idea)
+                                $postQuery = "INSERT INTO idea (user_name, title, idea)
                                 VALUES (:user_name, :title, :idea)";
                                 $postStatement = $pdo->prepare($postQuery);
                                 $postStatement->bindValue(':user_name', $data['user_name'], PDO::PARAM_STR);

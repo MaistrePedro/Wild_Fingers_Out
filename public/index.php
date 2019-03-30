@@ -3,9 +3,9 @@
 require '../src/connec.php';
 
 $pdo = new PDO(DSN, USER, PASS);
-$query = "SELECT * FROM ideas";
+$query = "SELECT * FROM idea";
 $res = $pdo->query($query);
-$ideas = $res->fetchAll();
+$idea = $res->fetchAll();
 
 
 $pageTitle = 'Discover our .Idea';
@@ -31,7 +31,8 @@ $pageUnderTitle = 'So much crazy !'
 	<link rel="stylesheet" href="css/genix-assets.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -51,11 +52,11 @@ $pageUnderTitle = 'So much crazy !'
         <section class="blog-page-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-lg-12">
                         <div class="blog-page-box iso-call">
                             <?php
 
-                            foreach ($ideas as $key => $value) {
+                            foreach ($idea as $key => $value) {
                                 include 'current/card.php';
                             }
                             ?>

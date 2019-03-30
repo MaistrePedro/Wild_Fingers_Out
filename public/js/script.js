@@ -348,15 +348,4 @@ $(window).on('resize', function() {
 
 /* -----------------------------------------------------------------------*/
 
-var numLikes = 0;
-
-function likes() {
-    numLikes = numLikes + 1;
-    document.getElementById("likes").innerHTML = numLikes;
-}
-
-function reset() {
-    numLikes = numLikes - 1;
-    document.getElementById("likes").innerHTML = numLikes;
-}
 
