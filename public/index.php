@@ -6,6 +6,10 @@ $query = "SELECT * FROM ideas";
 $res = $pdo->query($query);
 $ideas = $res->fetchAll();
 
+$res = $pdo->query($query);
+$result = $res->fetchAll(PDO::FETCH_ASSOC);
+$pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+
 
 $pageTitle = 'Welcome to .Idea';
 $pageUnderTitle = 'Let\'s make the world a better place with your .Idea !';
