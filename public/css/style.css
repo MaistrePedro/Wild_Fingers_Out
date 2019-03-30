@@ -1566,3 +1566,18 @@ section.contact-form-section {
 .modal-content {
   width: 25em;
 }
+
+.modal-content .btn, .blog-post button{
+  background-color: #b8a173;
+  color: white;
+  margin-left: 13em;
+  margin-top: 3em;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.4);
+
+}
+
+.modal-content .btn:hover, .blog-post button:hover{
+  background-color: #b8a173;
+  color: white;
+  box-shadow: none;
+}

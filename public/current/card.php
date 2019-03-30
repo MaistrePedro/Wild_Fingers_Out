@@ -5,7 +5,7 @@
         </ul>
         <h3 ><?php echo $value['title']; ?></h3>
         <p><?php echo $value['idea']; ?></p>
-        <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal<?php echo $value['id']; ?>">Let's see the Comments !</button>
+        <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#myModal<?php echo $value['id']; ?>">Let's see the Comments !</button>
     </div>
 
 </div>
