@@ -113,7 +113,7 @@ $pageUnderTitle = 'Great! You want to share with us your crazy .Idea ! :)'
                                             echo $data['idea'];
                                         }
                                         ?>
-                            </textarea>
+                                    </textarea>
                                     <div class="text-center mt-3">
                                         <button type="submit" class="btn btn-light">Send it now</button>
                                     </div>

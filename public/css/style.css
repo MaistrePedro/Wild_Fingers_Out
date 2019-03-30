@@ -1534,3 +1534,16 @@ section.contact-form-section {
   color: white;
   box-shadow: none;
 }
+
+#contact-form button{
+  background-color: #b8a173;
+  color: white;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.4);
+
+}
+
+#contact-form button:hover{
+  background-color: #b8a173;
+  color: white;
+  box-shadow: none;
+}
