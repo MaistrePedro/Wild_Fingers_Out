@@ -1,12 +1,11 @@
 <div class="blog-post">
     <div class="post-content">
-        <ul class="post-meta">
-            <li>By <a href="#"><?php echo $value[1] ?></a></li>
-        </ul>
-        <h2><?php echo $value[2] ?></h2>
+        <h2 data-target="#<?php echo "produit" . ($key + 1); ?>" aria-labelledby="modal"><?php echo $value[2] ?><br/><small> By <?php echo $value[1] ?></small></h2>
+
         <p><?php echo $value [3] ?></p>
-        <p><i class="fas fa-thumbs-up"></i> Like ?</p>
-        <p><i class="fas fa-thumbs-down"></i> Dislike ?</p>
+
+
     </div>
-    <span><i class="fas fa-heart"><?php echo " " . $value[4] ?></i></span>
+    <!--<span><i class="fas fa-heart"></i></span>-->
 </div>
+
