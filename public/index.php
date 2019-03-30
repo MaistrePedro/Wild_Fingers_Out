@@ -58,7 +58,7 @@ $pageUnderTitle = 'Let\'s make the world a better place with your .Idea !';
 
                             foreach ($ideas as $key => $value) {
                                 include 'current/card.php';
-                                //echo $value['id'];
+                                // echo $value['id'];
                             }
                             ?>
                         </div>

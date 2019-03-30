@@ -39,9 +39,6 @@ $pageUnderTitle = 'Great! You want to share with us your crazy .Idea ! :)'
             ?>
 
 
-
-
-
 			<section class="contact-form-section">
 				<div class="container">
 					<div class="contact-form-box">
@@ -59,9 +56,6 @@ $pageUnderTitle = 'Great! You want to share with us your crazy .Idea ! :)'
 
 
 
-
-
-
                                 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 $data = cleanData($_POST);
                                 $errors = [];
@@ -75,8 +69,7 @@ $pageUnderTitle = 'Great! You want to share with us your crazy .Idea ! :)'
                                 $errors['idea'] = 'Share with us your .Idea';
                                 }
                                 if (empty($errors)) {
-                                $postQuery = "INSERT INTO ideas (user_name, title, idea)
-                                VALUES (:user_name, :title, :idea)";
+                                $postQuery = "INSERT INTO ideas (user_name, title, idea) VALUES (:user_name, :title, :idea)";
                                 $postStatement = $pdo->prepare($postQuery);
                                 $postStatement->bindValue(':user_name', $data['user_name'], PDO::PARAM_STR);
                                 $postStatement->bindValue(':title', $data['title'], PDO::PARAM_STR);
@@ -99,7 +92,7 @@ $pageUnderTitle = 'Great! You want to share with us your crazy .Idea ! :)'
                                             ?>">
 										</div>
 										<div class="col-sm-6">
-                                            <p class="errors" ><?= $errors['title'] ?? '' ?></p></label>
+                                            <p class="errors" ><?= $errors['title'] ?? '' ?></p>
 											<input name="title" id="title" type="text" placeholder="Title" required value="<?php
                                             if (!empty($errors)) {
                                                 echo $data['title'];
