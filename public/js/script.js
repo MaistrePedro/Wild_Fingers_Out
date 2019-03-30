@@ -1,7 +1,8 @@
 /*jshint jquery:true */
+"use strict";
 
 $(document).ready(function($) {
-	"use strict";
+
 
 	/* global google: false */
 	/*jshint -W018 */
@@ -345,3 +346,12 @@ $(window).on('resize', function() {
 	var winDowHeight = $(window).outerHeight();
 	$('header').css('height', winDowHeight);
 });
+
+/* ---------------------------------------------------------------------- */
+/*	modal
+/* ---------------------------------------------------------------------- */
+
+/*$('#myModal').on('shown.bs.modal', function () {
+	$('#myInput').trigger('focus')
+})*/
+

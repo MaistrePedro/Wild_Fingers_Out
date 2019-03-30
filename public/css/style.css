@@ -1561,3 +1561,8 @@ section.contact-form-section {
       font-size: 12px; }
   #map {
     height: 200px; } }
+
+
+.modal-content {
+  width: 25em;
+}
