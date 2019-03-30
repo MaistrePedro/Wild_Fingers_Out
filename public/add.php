@@ -51,10 +51,10 @@ $pageUnderTitle = 'Share with us your crazy idea !'
 								<form id="contact-form">
 									<div class="row">
 										<div class="col-sm-6">
-											<input name="name" id="name" type="text" placeholder="Lastname*">
+											<input name="name" id="name" type="text" placeholder="Nick-name*">
 										</div>
 										<div class="col-sm-6">
-											<input name="mail" id="mail" type="text" placeholder="Firstname*">
+											<input name="mail" id="mail" type="text" placeholder="Title">
 										</div>
 									</div>
 

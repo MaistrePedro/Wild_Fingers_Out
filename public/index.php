@@ -1,5 +1,6 @@
 <?php
 
+require '../src/connec.php';
 
 $pdo = new PDO(DSN, USER, PASS);
 $query = "SELECT * FROM ideas";
@@ -52,6 +53,7 @@ $pageUnderTitle = 'So much crazy !'
                     <div class="col-md-12">
                         <div class="blog-page-box iso-call">
                             <?php
+
                             foreach ($ideas as $key => $value) {
                                 include 'current/card.php';
                             }
