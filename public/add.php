@@ -17,7 +17,7 @@ $pageUnderTitle = 'Great! You want to share with us your crazy .Idea ! :)'
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	
+
 	<link rel="stylesheet" href="css/genix-assets.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -39,26 +39,84 @@ $pageUnderTitle = 'Great! You want to share with us your crazy .Idea ! :)'
             ?>
 
 
+
+
+
 			<section class="contact-form-section">
 				<div class="container">
 					<div class="contact-form-box">
 						<div class="row">
 							<div class="col-sm-12">
 								<h2>Complete our .gitignore</h2>
+                                <?php
+                                require '../src/function.php';
 
-								<form id="contact-form">
+
+                                require '../src/connec.php';
+
+                                $pdo = new PDO(DSN, USER, PASS);
+                                $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+
+
+
+
+
+
+                                if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                                $data = cleanData($_POST);
+                                $errors = [];
+                                if (empty($data['user_name'])) {
+                                $errors['user_name'] = 'Please define your Nickname';
+                                }
+                                if (empty($data['title'])) {
+                                $errors['title'] = 'Define a title for your .Idea';
+                                }
+                                if (empty($data['idea'])) {
+                                $errors['idea'] = 'Share with us your .Idea';
+                                }
+                                if (empty($errors)) {
+                                $postQuery = "INSERT INTO ideas (user_name, title, idea)
+                                VALUES (:user_name, :title, :idea)";
+                                $postStatement = $pdo->prepare($postQuery);
+                                $postStatement->bindValue(':user_name', $data['user_name'], PDO::PARAM_STR);
+                                $postStatement->bindValue(':title', $data['title'], PDO::PARAM_STR);
+                                $postStatement->bindValue(':idea', $data['idea'], PDO::PARAM_STR);
+                                $postStatement->execute();
+                                header('Location: index.php');
+                                }
+                                }
+                                // --------------------------------------------------------- //
+                                ?>
+
+								<form id="contact-form" novalidate method="post">
 									<div class="row">
 										<div class="col-sm-6">
-											<input name="name" id="name" type="text" placeholder="Lastname*">
+                                            <p class="errors" ><?= $errors['user_name'] ?? '' ?></p>
+											<input name="user_name" id="user_name" type="text" placeholder="Nick-name*" required value="<?php
+                                            if (!empty($errors)) {
+                                                echo $data['user_name'];
+                                            }
+                                            ?>">
 										</div>
 										<div class="col-sm-6">
-											<input name="mail" id="mail" type="text" placeholder="Firstname*">
+                                            <p class="errors" ><?= $errors['title'] ?? '' ?></p></label>
+											<input name="title" id="title" type="text" placeholder="Title" required value="<?php
+                                            if (!empty($errors)) {
+                                                echo $data['title'];
+                                            }
+                                            ?>">
 										</div>
 									</div>
-
-									<textarea name="comment" id="comment" placeholder="Your Idea*"></textarea>
-									<input type="submit" id="submit_contact" value="Submit Comment">
-									<div id="msg" class="message alert">
+                                    <p class="errors"><?= $errors['idea'] ?? '' ?></p>
+									<textarea name="idea" id="idea" placeholder="Your Idea*"><?php
+                                        if (!empty($errors)) {
+                                            echo $data['idea'];
+                                        }
+                                        ?>
+                            </textarea>
+                                    <div class="text-center mt-3">
+                                        <button type="submit" class="btn btn-light">Send it now</button>
+                                    </div>
 									
 									</div>
 								</form>

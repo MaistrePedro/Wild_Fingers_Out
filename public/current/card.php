@@ -1,5 +1,6 @@
 <div class="blog-post" data-target="#idea<?php echo $value['id']; ?>">
     <div class="post-content">
+<<<<<<< HEAD
         <ul class="post-meta">
             <li>By <a href="#"><?php echo $value['user_name'] ?></a></li>
         </ul>
@@ -29,5 +30,14 @@
         </div>
 
     </div>
+=======
+        <h2 data-target="#<?php echo "produit" . ($key + 1); ?>" aria-labelledby="modal"><?php echo $value[2] ?><br/><small> By <?php echo $value[1] ?></small></h2>
+
+        <p><?php echo $value [3] ?></p>
+
+
+    </div>
+    <!--<span><i class="fas fa-heart"></i></span>-->
+>>>>>>> 0dd948d7968c200e142bc2ca2a3c5aa50b4a5c1c
 </div>
 

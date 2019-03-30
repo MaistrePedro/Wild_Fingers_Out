@@ -347,6 +347,7 @@ $(window).on('resize', function() {
 	$('header').css('height', winDowHeight);
 });
 
+<<<<<<< HEAD
 /* ---------------------------------------------------------------------- */
 /*	modal
 /* ---------------------------------------------------------------------- */
@@ -354,4 +355,19 @@ $(window).on('resize', function() {
 /*$('#myModal').on('shown.bs.modal', function () {
 	$('#myInput').trigger('focus')
 })*/
+=======
+/* -----------------------------------------------------------------------*/
+
+var numLikes = 0;
+
+function likes() {
+    numLikes = numLikes + 1;
+    document.getElementById("likes").innerHTML = numLikes;
+}
+
+function reset() {
+    numLikes = numLikes - 1;
+    document.getElementById("likes").innerHTML = numLikes;
+}
+>>>>>>> 0dd948d7968c200e142bc2ca2a3c5aa50b4a5c1c
 
